@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #2c3e50;
+            color: white;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #34495e;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .header {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('sessions') }}">Sessions</a>
+        <a href="{{ url_for('profile') }}">Profile</a>
+        <a href="{{ url_for('analytics') }}">Analytics</a>
+        <a href="{{ url_for('questionnaire') }}">Questionnaire</a>
+        <a href="{{ url_for('integrations') }}">Integrations</a>
+        <a href="{{ url_for('settings') }}">Settings</a>
+        <a href="{{ url_for('faqs') }}">FAQs</a>
+        <a href="{{ url_for('support') }}">Support</a>
+        <a href="{{ url_for('feedback') }}">Feedback</a>
+        <form action="/logout" method="post" style="margin: 0;">
+            <button type="submit" style="width: 100%; background: none; border: none; color: white; padding: 15px; text-align: left; cursor: pointer;">Logout</button>
+        </form>
+    </div>
+    <div class="content">
+        <div class="header">Hello, {{ firstname }}</div>
+        <div class="header">Dashboard</div>
+        <!-- Add your main content here -->
+    </div>
+</body>
+</html>
