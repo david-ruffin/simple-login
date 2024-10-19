@@ -53,6 +53,12 @@ python db_setup.py
 python app.py
 ```
 
+## Step 8: Visit the url
+
+```bash
+In your browser, visit http://127.0.0.1:5000 or http://localhost:5000
+```
+
 ## Additional Notes
 
 - Make sure your `db_setup.py` script is correctly creating the database and `users` table.
